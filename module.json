@@ -1,0 +1,14 @@
+{
+  "id": "PatcherSmartCellsName",
+  "name": "Smart: Cells' name patcher",
+  "author": "vabatta",
+  "version": "1.0.0",
+  "released": "27/02/2019",
+  "updated": "2/27/2019",
+  "description": "Patcher to assign levels of encounter in cells name.",
+  "requires": [
+    "unifiedPatchingFramework"
+  ],
+  "moduleLoader": "UPF",
+  "canHotLoad": true
+}
