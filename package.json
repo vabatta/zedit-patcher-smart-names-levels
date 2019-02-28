@@ -1,9 +1,9 @@
 {
-  "name": "zedit-patcher-smart-cells-name",
-  "description": "Patcher to assign levels of encounter in cells name.",
-  "version": "1.1.0",
+  "name": "zedit-patcher-smart-names-levels",
+  "description": "Patcher to assign levels of encounter in cell and quest names.",
+  "version": "1.2.0",
   "author": "vabatta",
-  "repository": "https://github.com/vabatta/zedit-patcher-smart-cells-name.git",
+  "repository": "https://github.com/vabatta/zedit-patcher-smart-names-levels.git",
   "private": true,
   "license": "GPL-3.0-only",
   "scripts": {
