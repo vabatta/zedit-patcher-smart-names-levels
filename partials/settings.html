@@ -1,5 +1,48 @@
 <h2 ng-bind="settings.PatcherSmartCellsName.title"></h2>
 
 <section>
-    <ignore-plugins patcher-id="PatcherSmartCellsName"></ignore-plugins>
+  <ignore-plugins patcher-id="PatcherSmartCellsName"></ignore-plugins>
+  <hr>
+  <div>
+    <span class="input-label"
+      title="This will skip to apply the formula when the cells level is 0. This happens when both min and max level are the same.">Skip 0s level: </span>
+    <input type="checkbox" ng-model="settings.PatcherSmartCellsName.skipEmpty" />
+  </div>
+</section>
+
+<section>
+  <h3>Valid Tags</h3>
+  <div>
+    <b>{min}</b>: will be filled with the number of the lowest encounter zone level.
+  </div>
+  <div>
+    <b>{max}</b>: will be filled with the number of the highest encounter zone level.
+  </div>
+  <div>
+    <b>{name}</b>: will be filled with the original name of the cell.
+  </div>
+</section>
+
+<section>
+  <h3>Formulas</h3>
+  <div>
+    <span class="input-label"
+      title="This is the formula that will be used for when the encounter zone is leveled for a set range. This happens when the min level is less than the max level.">
+      Ranged leveled zones: </span>
+    <input type="text" ng-model="settings.PatcherSmartCellsName.formulaRangedLeveled" />
+  </div>
+
+  <div>
+    <span class="input-label"
+      title="This is the formula that will be used for when the encounter zone is deleveled for a set range. This happens when the min and max level are identical.">
+      Deleveled zones: </span>
+    <input type="text" ng-model="settings.PatcherSmartCellsName.formulaDeleveled" />
+  </div>
+
+  <div>
+    <span class="input-label"
+      title="This is the formula that will be used for when the encounter zone is leveled. This happens when neither of the conditions above match.">
+      Leveled zones: </span>
+    <input type="text" ng-model="settings.PatcherSmartCellsName.formulaLeveled" />
+  </div>
 </section>

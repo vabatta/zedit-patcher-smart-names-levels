@@ -9,6 +9,7 @@ registerPatcher({
     templateUrl: `${patcherUrl}/partials/settings.html`,
     defaultSettings: {
       title: info.name,
+      skipEmpty: true,
       formulaRangedLeveled: '{name} ({min} ~ {max})',
       formulaDeleveled: '{name} ({min})',
       formulaLeveled: '{name} ({min}+)',
@@ -46,6 +47,8 @@ registerPatcher({
         let formula = settings.formulaLeveled
         if (min < max) formula = settings.formulaRangedLeveled
         else if (min === max) formula = settings.formulaDeleveled
+        // if they are the same without a level, skip
+        if (settings.skipEmpty && min === 0 && max === 0) return
         // replace with actual values
         name = formula.replace(/{name}/g, name)
         name = name.replace(/{min}/g, min)

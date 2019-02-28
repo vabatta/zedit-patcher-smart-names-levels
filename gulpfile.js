@@ -42,3 +42,4 @@ const pack = () => {
 // module.exports = series(pack)
 module.exports.pack = series(pack)
 module.exports.update = series(update)
+module.exports.release = series(update, pack)
